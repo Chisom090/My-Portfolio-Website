@@ -1,0 +1,86 @@
+/* Preloader Animation */
+#loading-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+}
+
+#loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    animation: loadingAnimation 3s linear infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+/
+
+/* Fade In Animation for Sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Section Animation */
+.section {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.section:nth-child(odd) {
+    background-color: var(--section-bg-odd);
+}
+
+.section:nth-child(even) {
+    background-color: var(--section-bg-even);
+}
+
+
+
+/* Animation for Text Appearance */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/* Always visible navbar on mobile */
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 1 !important; /* Ensure it remains visible */
+        transition: none; /* Remove transition for a cleaner mobile experience */
+    }
+}

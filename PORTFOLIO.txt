@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Dec 28 10:32:48 2024
+
+@author: chisom
+"""
+
+portfolio/
+├── index.html             (Main HTML file)
+├── css/
+│   ├── styles.css         (All CSS styles)
+│   ├── animations.css     (Special animations)
+├── js/
+│   ├── script.js          (JavaScript interactions)
+├── assets/
+│   ├── images/            (Images for profile, projects, etc.)
+│   ├── resume.pdf         (Downloadable resume)

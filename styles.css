@@ -119,6 +119,7 @@ h3 {
     z-index: 1000;
     transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out;
     padding: 10px 15px; /* Reduced padding for mobile compatibility */
+   
 }
 
 .navbar .container {
@@ -175,7 +176,8 @@ h3 {
 @media (max-width: 768px) {
     /* Show hamburger menu on mobile */
     .hamburger-menu {
-        display: flex;
+        display:flex;
+        margin-left: auto;
     }
 
     /* Hide nav links by default on mobile */
@@ -184,8 +186,7 @@ h3 {
         flex-direction: column;
         gap: 20px;
         position: absolute;
-        top: 60px; /* Adjust to navbar height */
-        left: 0;
+        top: 20px; /* Adjust to navbar height */
         width: 100%;
         background-color: #333;
         padding: 20px;
@@ -391,6 +392,7 @@ h3 {
     gap: 20px;
     justify-content: center;
     align-items: stretch;
+    list-style: none;
 }
 
 .skills-list li {
@@ -523,7 +525,7 @@ h3 {
 #testimonials h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #343a40; /* Dark title */
+    color: black; /* Dark title */
     margin-bottom: 70px;
     position: relative;
 }
@@ -604,6 +606,7 @@ h3 {
         height: 180px;
     }
 
+
     .card .front,
     .card .back {
         font-size: 0.9rem;
@@ -663,6 +666,10 @@ h3 {
     color: #b0b0b0; /* Softer text color for descriptions */
 }
 
+.projects-list a{
+    color: var(--secondary-color);
+}
+
 .projects-list li .btn {
     margin-top: auto;
     padding: 10px 15px;
@@ -676,10 +683,21 @@ h3 {
     align-self: flex-start;
 }
 
-.projects-list li .btn:hover {
+.projects-list li  .btn:hover {
     background-color: #00B5E2;
     color: #ffffff;
 }
+
+#projects  p{
+    margin-top: 50px;
+}
+
+.projects-list li:hover a {
+    transform: translateY(-10px) scale(1.03); /* Lift and scale on hover */
+    box-shadow:transparent ;
+    color: var(--background-color); /* Change text color on hover */
+} 
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -690,6 +708,18 @@ h3 {
     .projects-list li {
         padding: 20px;
     }
+
+    .projects-list li:hover a {
+        transform: translateY(-10px) scale(1.03); /* Lift and scale on hover */
+        box-shadow:transparent ;
+        color: var(--background-color); /* Change text color on hover */
+    } 
+
+  #projects  p{
+        margin-top: 50px;
+    }
+
+  
 }
 /* Contact Section Styling */
 #contact {
@@ -699,6 +729,9 @@ h3 {
     margin-top: 40px; /* Reduce space at the top to fill the gap from removed section */
 }
 
+#contact h2 {
+    color: black;
+}
 /* Container for Centering Content */
 .container {
     max-width: 800px; /* Reduced the max-width for a more compact feel */
